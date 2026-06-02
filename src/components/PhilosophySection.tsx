@@ -14,7 +14,7 @@ export function PhilosophySection() {
           transition={{ duration: 0.8 }}
           className="font-instrument text-5xl md:text-7xl lg:text-8xl text-white tracking-tight mb-16 md:mb-24"
         >
-          Innovation <em className="italic text-white/40">x</em> Vision
+          Stories <em className="italic text-white/40">x</em> Voice
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <motion.div
@@ -40,16 +40,16 @@ export function PhilosophySection() {
             className="flex flex-col gap-8"
           >
             <div>
-              <p className="text-white/40 text-xs tracking-widest uppercase mb-4">Choose your space</p>
+              <p className="text-white/40 text-xs tracking-widest uppercase mb-4">Listen anywhere</p>
               <p className="text-white/70 text-base md:text-lg leading-relaxed">
-                Every meaningful breakthrough begins at the intersection of disciplined strategy and remarkable creative vision. We operate at that crossroads, turning bold thinking into tangible outcomes that move people and reshape industries.
+                Whether you're on a walk, behind the wheel, or winding down before sleep, every audiobook is one tap away. Stream from any device, no app required.
               </p>
             </div>
             <div className="w-full h-px bg-white/10" />
             <div>
-              <p className="text-white/40 text-xs tracking-widest uppercase mb-4">Shape the future</p>
+              <p className="text-white/40 text-xs tracking-widest uppercase mb-4">Curated worldwide</p>
               <p className="text-white/70 text-base md:text-lg leading-relaxed">
-                We believe that the best work emerges when curiosity meets conviction. Our process is designed to uncover hidden opportunities and translate them into experiences that resonate long after the first impression.
+                From Tolstoy to Murakami, from public-domain classics to translated gems — we host audiobooks from every corner of the literary world, all free to listen.
               </p>
             </div>
           </motion.div>
