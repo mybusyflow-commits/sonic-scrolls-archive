@@ -136,6 +136,7 @@ function Index() {
       <FeaturedVideoSection />
       <PhilosophySection />
       <ServicesSection />
+      <LandingAuth />
     </div>
   );
 }
