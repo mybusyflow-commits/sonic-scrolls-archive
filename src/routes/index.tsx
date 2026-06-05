@@ -10,7 +10,7 @@ import { LandingAuth } from "@/components/LandingAuth";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Asme — Free Audiobooks From Around the World" },
+      { title: "Summo — Free Audiobooks From Around the World" },
       { name: "description", content: "Stream a worldwide library of free audiobooks. Classics, fiction, philosophy and more — narrated and ready to play." },
       { property: "og:title", content: "Asme — Free Audiobooks From Around the World" },
       { property: "og:description", content: "Stream a worldwide library of free audiobooks." },

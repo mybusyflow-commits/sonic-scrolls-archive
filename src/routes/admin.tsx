@@ -5,7 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/admin")({
-  head: () => ({ meta: [{ title: "Admin — Asme" }] }),
+  head: () => ({ meta: [{ title: "Admin — Summo" }] }),
   component: AdminPage,
 });
 
@@ -58,7 +58,7 @@ function AdminPage() {
           <Link to="/" className="flex items-center gap-2 text-white">
             <ArrowLeft size={18} />
             <Headphones size={22} />
-            <span className="font-semibold text-lg font-instrument">Asme</span>
+            <span className="font-semibold text-lg font-instrument">Summo</span>
           </Link>
           {session && (
             <button
