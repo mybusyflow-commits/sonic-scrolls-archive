@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Play, Headphones, ArrowLeft } from "lucide-react";
+import { Play, Headphones, ArrowLeft, LogIn, LogOut } from "lucide-react";
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import { AudioPlayer, type NowPlaying } from "@/components/AudioPlayer";
@@ -30,16 +30,39 @@ function LibraryPage() {
   const [books, setBooks] = useState<Audiobook[]>([]);
   const [loading, setLoading] = useState(true);
   const [track, setTrack] = useState<NowPlaying | null>(null);
+  const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
-    supabase
-      .from("audiobooks")
-      .select("*")
-      .order("created_at", { ascending: false })
-      .then(({ data, error }) => {
-        if (!error && data) setBooks(data as Audiobook[]);
-        setLoading(false);
-      });
+    supabase.auth.getUser().then(({ data }) => setUser(data.user));
+    const { data: sub } = supabase.auth.onAuthStateChange((_e, s) =>
+      setUser(s?.user ?? null),
+    );
+    return () => sub.subscription.unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    const load = () =>
+      supabase
+        .from("audiobooks")
+        .select("*")
+        .order("created_at", { ascending: false })
+        .then(({ data, error }) => {
+          if (!error && data) setBooks(data as Audiobook[]);
+          setLoading(false);
+        });
+    load();
+
+    const channel = supabase
+      .channel("audiobooks-live")
+      .on(
+        "postgres_changes",
+        { event: "*", schema: "public", table: "audiobooks" },
+        () => load(),
+      )
+      .subscribe();
+    return () => {
+      supabase.removeChannel(channel);
+    };
   }, []);
 
   return (
@@ -51,7 +74,21 @@ function LibraryPage() {
             <Headphones size={22} />
             <span className="font-semibold text-lg font-instrument">Asme</span>
           </Link>
-          <Link to="/admin" className="text-white/60 hover:text-white text-sm">Admin</Link>
+          <div className="flex items-center gap-4 text-sm">
+            {user ? (
+              <button
+                onClick={() => supabase.auth.signOut()}
+                className="text-white/60 hover:text-white flex items-center gap-1.5"
+              >
+                <LogOut size={14} /> Sign out
+              </button>
+            ) : (
+              <Link to="/auth" className="text-white/60 hover:text-white flex items-center gap-1.5">
+                <LogIn size={14} /> Sign in
+              </Link>
+            )}
+            <Link to="/admin" className="text-white/40 hover:text-white">Admin</Link>
+          </div>
         </div>
       </nav>
 
