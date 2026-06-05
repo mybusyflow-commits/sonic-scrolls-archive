@@ -11,9 +11,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Summo — Free Audiobooks From Around the World" },
-      { name: "description", content: "Stream a worldwide library of free audiobooks. Classics, fiction, philosophy and more — narrated and ready to play." },
+      { name: "description", content: "Summo is an outstanding audiobook library. Find almost all the books you love. Narrated and streamable for free." },
       { property: "og:title", content: "Summo — Free Audiobooks From Around the World" },
-      { property: "og:description", content: "Stream a worldwide library of free audiobooks." },
+      { property: "og:description", content: "Summo is an outstanding audiobook library. Find almost all the books you love. Narrated and streamable for free." },
     ],
   }),
   component: Index,
