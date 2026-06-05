@@ -19,7 +19,7 @@ interface Audiobook {
 export const Route = createFileRoute("/library")({
   head: () => ({
     meta: [
-      { title: "Library — Asme Audiobooks" },
+      { title: "Library — Summo Audiobooks" },
       { name: "description", content: "Browse and stream free audiobooks from around the world." },
     ],
   }),
@@ -72,7 +72,7 @@ function LibraryPage() {
           <Link to="/" className="flex items-center gap-2 text-white">
             <ArrowLeft size={18} />
             <Headphones size={22} />
-            <span className="font-semibold text-lg font-instrument">Asme</span>
+            <span className="font-semibold text-lg font-instrument">Summo</span>
           </Link>
           <div className="flex items-center gap-4 text-sm">
             {user ? (

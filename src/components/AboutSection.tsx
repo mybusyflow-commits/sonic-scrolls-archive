@@ -17,7 +17,7 @@ export function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-white/40 text-sm tracking-widest uppercase mb-8"
         >
-          About Asme
+          About Summo
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 40 }}

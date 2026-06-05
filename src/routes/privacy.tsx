@@ -4,8 +4,8 @@ import { ArrowLeft, Headphones } from "lucide-react";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Asme Audiobooks" },
-      { name: "description", content: "How Asme collects, uses, and protects your information." },
+      { title: "Privacy Policy — Summo Audiobooks" },
+      { name: "description", content: "How Summo collects, uses, and protects your information." },
     ],
   }),
   component: PrivacyPage,
@@ -19,7 +19,7 @@ function PrivacyPage() {
           <Link to="/" className="flex items-center gap-2 text-white">
             <ArrowLeft size={18} />
             <Headphones size={22} />
-            <span className="font-semibold text-lg font-instrument">Asme</span>
+            <span className="font-semibold text-lg font-instrument">Summo</span>
           </Link>
         </div>
       </nav>
@@ -35,9 +35,9 @@ function PrivacyPage() {
           <section>
             <h2 className="font-instrument text-2xl text-white mb-3">1. Who we are</h2>
             <p>
-              Asme is a free audiobook streaming service. You can browse and stream the entire
-              library without creating an account. This policy explains what information we
-              collect when you do choose to sign in or otherwise interact with the site.
+               Summo is a free audiobook streaming service. You can browse and stream the entire
+               library without creating an account. This policy explains what information we
+               collect when you do choose to sign in or otherwise interact with the site.
             </p>
           </section>
 
@@ -64,18 +64,18 @@ function PrivacyPage() {
           <section>
             <h2 className="font-instrument text-2xl text-white mb-3">3. How we use it</h2>
             <p>
-              We use this information to operate Asme, authenticate you, prevent abuse, and
-              improve the library. We do not sell your personal information and we do not show
-              advertising.
+               We use this information to operate Summo, authenticate you, prevent abuse, and
+               improve the library. We do not sell your personal information and we do not show
+               advertising.
             </p>
           </section>
 
           <section>
             <h2 className="font-instrument text-2xl text-white mb-3">4. Service providers</h2>
             <p>
-              Asme is built on Lovable Cloud (powered by Supabase) for authentication, database,
-              and audio storage, and uses Google as an optional sign-in provider. These providers
-              process data on our behalf under their own privacy terms.
+               Summo is built on Lovable Cloud (powered by Supabase) for authentication, database,
+               and audio storage, and uses Google as an optional sign-in provider. These providers
+               process data on our behalf under their own privacy terms.
             </p>
           </section>
 
@@ -99,8 +99,8 @@ function PrivacyPage() {
           <section>
             <h2 className="font-instrument text-2xl text-white mb-3">7. Children</h2>
             <p>
-              Asme is not directed at children under 13. If you believe a child has provided us
-              with personal information, contact us and we will remove it.
+               Summo is not directed at children under 13. If you believe a child has provided us
+               with personal information, contact us and we will remove it.
             </p>
           </section>
 
@@ -117,7 +117,7 @@ function PrivacyPage() {
             <p>
               Questions about this policy? Email{" "}
               <a href="mailto:privacy@asme.audio" className="text-white underline">
-                privacy@asme.audio
+                 privacy@summo.audio
               </a>
               .
             </p>

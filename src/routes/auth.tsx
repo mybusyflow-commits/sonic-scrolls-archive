@@ -6,7 +6,7 @@ import { lovable } from "@/integrations/lovable";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/auth")({
-  head: () => ({ meta: [{ title: "Sign in — Asme" }] }),
+  head: () => ({ meta: [{ title: "Sign in — Summo" }] }),
   component: AuthPage,
 });
 
@@ -45,7 +45,7 @@ function AuthPage() {
           <Link to="/" className="flex items-center gap-2 text-white">
             <ArrowLeft size={18} />
             <Headphones size={22} />
-            <span className="font-semibold text-lg font-instrument">Asme</span>
+            <span className="font-semibold text-lg font-instrument">Summo</span>
           </Link>
         </div>
       </nav>
