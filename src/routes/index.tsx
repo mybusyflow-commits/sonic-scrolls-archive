@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Summo — Free Audiobooks From Around the World" },
       { name: "description", content: "Stream a worldwide library of free audiobooks. Classics, fiction, philosophy and more — narrated and ready to play." },
-      { property: "og:title", content: "Asme — Free Audiobooks From Around the World" },
+      { property: "og:title", content: "Summo — Free Audiobooks From Around the World" },
       { property: "og:description", content: "Stream a worldwide library of free audiobooks." },
     ],
   }),
@@ -84,7 +84,7 @@ function Index() {
             <div className="flex items-center">
               <div className="flex items-center gap-2">
                 <Headphones size={22} className="text-white" />
-                <span className="text-white font-semibold text-lg font-instrument">Asme</span>
+                <span className="text-white font-semibold text-lg font-instrument">Summo</span>
               </div>
               <div className="hidden md:flex items-center gap-8 ml-8">
                 <Link to="/library" className="text-white/80 hover:text-white text-sm font-medium">Library</Link>
@@ -116,7 +116,7 @@ function Index() {
           </Link>
 
           <p id="about" className="text-white text-sm leading-relaxed px-4 max-w-xl">
-            Asme is a worldwide audiobook library. Every title is narrated and streamable for free — no signup, no fees, no ads.
+            Summo is a worldwide audiobook library. Every title is narrated and streamable for free — no signup, no fees, no ads.
           </p>
         </div>
 
