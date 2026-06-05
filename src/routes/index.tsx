@@ -120,7 +120,7 @@ function Index() {
           </p>
         </div>
 
-        <div className="relative z-10 flex justify-center gap-4 pb-12">
+        <div className="relative z-10 flex justify-center gap-4 pb-6">
           {[Instagram, Twitter, Globe].map((Icon, i) => (
             <button
               key={i}
@@ -129,6 +129,9 @@ function Index() {
               <Icon size={20} />
             </button>
           ))}
+        </div>
+        <div className="relative z-10 flex justify-center pb-8 text-xs text-white/40">
+          <Link to="/privacy" className="hover:text-white/80">Privacy Policy</Link>
         </div>
       </section>
 
