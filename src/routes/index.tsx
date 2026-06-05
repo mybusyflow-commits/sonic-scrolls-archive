@@ -5,6 +5,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { FeaturedVideoSection } from "@/components/FeaturedVideoSection";
 import { PhilosophySection } from "@/components/PhilosophySection";
 import { ServicesSection } from "@/components/ServicesSection";
+import { LandingAuth } from "@/components/LandingAuth";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -135,6 +136,7 @@ function Index() {
       <FeaturedVideoSection />
       <PhilosophySection />
       <ServicesSection />
+      <LandingAuth />
     </div>
   );
 }
