@@ -116,7 +116,7 @@ function PrivacyPage() {
             <h2 className="font-instrument text-2xl text-white mb-3">9. Contact</h2>
             <p>
               Questions about this policy? Email{" "}
-              <a href="mailto:privacy@asme.audio" className="text-white underline">
+              <a href="mailto:privacy@summo.audio" className="text-white underline">
                  privacy@summo.audio
               </a>
               .
